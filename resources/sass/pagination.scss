@@ -1,0 +1,74 @@
+.paginate
+{
+  margin-top: 72px;
+  .pagination
+  {
+    display: flex;
+    justify-content: center;
+  }
+  .page-item
+  {
+    border: 1px solid #0880AE;
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+
+    color: #727272;
+    transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    transition: background 0.3s;
+    a:hover
+    {
+      color: #FFFFFF;
+    }
+    &:hover:not(.separator), &.active:not(.separator)
+    {
+      background: #0880AE;
+      color: #FFFFFF;
+      a
+      {
+        color: #FFFFFF;
+      }
+      svg path
+      {
+        fill:#FFFFFF;
+      }
+    }
+    &.previous
+    {
+      svg
+      {
+        transform: rotate(90deg);
+      }
+    }
+    &.next
+    {
+      svg
+      {
+        transform: rotate(-90deg);
+      }
+    }
+    &.separator
+    {
+      border: none;
+    }
+    svg path
+    {
+      fill:#252525;
+    }
+    .pages-link
+    {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+}

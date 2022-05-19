@@ -1,0 +1,44 @@
+// Colors
+$MainBG: #ffffff;
+$Accent: #0880AE;
+$Dark: #252525;
+$Accent2: #F26532;
+// Typography
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.1;
+/* Truncate text from line N*/
+@mixin TruncateMainText($fontSize, $lineHeight){
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSize;
+  line-height: $fontSize*2;
+  height: $fontSize*2*$lineHeight;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+/* Truncate h3 from line N*/
+@mixin TruncateH3($fontSize, $lineHeight){
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fontSize;
+  line-height: $fontSize*1.8181;
+  height: $fontSize*1.8181*$lineHeight;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: $Dark;
+}
+@mixin MenuText(){
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
